@@ -1,0 +1,173 @@
+@primary: #2F394D;
+@secondary: #EE4266;
+@tertiary: #CED3DC;
+@margin-static-large: 50px;
+@margin-static-short: 10px;
+@width-1: 120px;
+@height-1: 60px;
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+h1 {
+    color: @tertiary;
+    font-size: 3em;
+    margin: @margin-static-short 0 @margin-static-short 0;
+}
+
+.App, #root, .page-container {
+    height: 100%;
+}
+
+.nav ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.App-header {
+    display: flex;
+    height: @height-1;
+    margin-top: @margin-static-short;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.nav__menu {
+    display: flex;
+    list-style-type: none;
+    height: 100%;
+    margin: 0;
+}
+
+.nav__menu--item {
+    display: flex;
+    flex-direction: row;
+    color: @tertiary;
+    cursor: pointer;
+    width: @width-1;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-left: #CED3DC 1px solid;
+}
+
+.social-link {
+    display: flex;
+    font-size: 3em;
+    color: @tertiary;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link:not(:first-child) {
+    margin-left: @margin-static-large;
+}
+
+.nav__menu:last-child {
+    border-right: #CED3DC 1px solid;
+}
+
+.splash-text {
+    margin-top: calc(50vh - 6em - @margin-static-large - @margin-static-large);
+}
+
+.stars-wrapper {
+    position: relative;
+	height: 100vh;
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #EE4266 0%, #2F394D 1%, #181C25 100%);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.orbit-container {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+}
+
+.inline-header {
+    display: inline-block;
+}
+
+.highlight-header {
+    margin-left: 0.3em;
+    color: @secondary;
+}
+
+.text-with-background {
+    margin: 5% 150px @margin-static-short 150px;
+    height: 100%;
+}
+
+.page-container {
+    padding: 0 @margin-static-large 0 @margin-static-large;
+}
+
+.text-body {
+    margin: @margin-static-large 0 @margin-static-short 0;
+    overflow: auto;
+    height: 60%;
+    background-color: @primary;
+    opacity: 0.85;
+    padding: @margin-static-large 100px @margin-static-large 100px;
+    color: @tertiary;
+}
+
+.section-title {
+    color: @secondary;
+}
+
+.inline-link {
+    text-decoration: underline;
+    color: @tertiary;
+}
+
+.button-container {
+    position: absolute;
+    left: 200px;
+    bottom: 50px;
+}
+
+.home-button {
+    background-color: transparent;
+    color: @tertiary;
+    height: 50px;
+    width: 200px;
+    font-size: 1em;
+    font-weight: 700;
+    border: 2px solid @secondary;
+    border-radius: 5px;
+}
